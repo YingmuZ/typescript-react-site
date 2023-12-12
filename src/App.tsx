@@ -4,6 +4,7 @@ import { SelectedPage } from "@/shared/types";
 import { useEffect } from "react";
 import Home from "@/scenes/home";
 import Benefits from "@/scenes/benefits";
+import OurClasses from "@/scenes/ourClasses";
 
 
 function App() {
@@ -24,17 +25,18 @@ function App() {
 
   return (
     <div className="app bg-gray-20">
-      <Navbar 
-        isTopOfPage={isTopOfPage} 
-        selectedPage={selectedPage} 
-        setSelectedPage={setSelectedPage} 
+      <Navbar
+        isTopOfPage={isTopOfPage}
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
       />
-      <Home 
-        setSelectedPage={setSelectedPage} 
+      <Home
+        setSelectedPage={setSelectedPage}
       />
-      <Benefits 
-        setSelectedPage={setSelectedPage} 
+      <Benefits
+        setSelectedPage={setSelectedPage}
       />
+      <OurClasses setSelectedPage={setSelectedPage} />
     </div>
   );
 }
